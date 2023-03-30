@@ -10,3 +10,14 @@
 - upload class & web in host
 - edit web.php ans set IP-PORT
 - if ssl set in your x-ui panel change http to https in ssl
+
+## Parameters
+
+ - value
+ - type
+
+## Example To Use Api
+
+- null1
+- null2
+- null3
