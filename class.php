@@ -55,23 +55,18 @@ class subscription_inquiry_xui{
         
         for($i=0;$i<=count($result) - 1;$i++){
             
-            if($type == 'port'){
-                if($value == $result[$i]['port']){
-                    return $result[$i];
-                }
-            }elseif($type == 'remark'){
-                if($value == $result[$i]['remark']){
-                    return $result[$i];
-                }else{
-                    for($j=0;$j<=count($result[$i]['clientStats']) - 1;$j++){
-                        if($value == $result[$i]['clientStats'][$j]['email']){
-                            return $result[$i]['clientStats'][$j];
-                        }
+            if($value == $result[$i][$type]){
+                return $result[$i];
+            }else{
+                for($j=0;$j<=count($result[$i]['clientStats']) - 1;$j++){
+                    if($$value == $result[$i]['clientStats'][$j]['email']){
+                        return $result[$i]['clientStats'][$j];
                     }
                 }
             }
 
         }
+
     }
     
 }
