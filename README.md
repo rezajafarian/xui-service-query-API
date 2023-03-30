@@ -8,8 +8,8 @@
 ## How To Run Bot 
 
 - upload class & web in host
-- edit web.php ans set IP-PORT
-- if ssl set in your x-ui panel change http to https in ssl
+- edit web.php and set [ IP-PORT-SSL-SESSION ]
+- If ssl is set in your x-ui panel, the config -> ssl section should be set to https, otherwise ssl
 
 ## Parameters
 
