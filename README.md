@@ -16,6 +16,7 @@
  - value
  - type
 
+### copy
 ## Example To Use Api
 
 - search by remark -> https://domin.com/folder/web.php?value=name&type=remark
