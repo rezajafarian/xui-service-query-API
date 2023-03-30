@@ -48,19 +48,19 @@ class subscription_inquiry_xui{
         
     }
     
-    public function service_status($value, $type){
+    public function service_status($input, $type){
         
         $url = $this->ssl . $this->ip . ':' . $this->port . '/xui/inbound/list';
-        $result = self::request($url, true, $this->headers)['obj'];
+        $object = self::request($url, true, $this->headers)['obj'];
         
-        for($i=0;$i<=count($result) - 1;$i++){
+        for($i=0;$i<=count($object)-1;$i++){
             
-            if($value == $result[$i][$type]){
-                return $result[$i];
+            if($input == $object[$i][$type]){
+                return $object[$i];
             }else{
-                for($j=0;$j<=count($result[$i]['clientStats']) - 1;$j++){
-                    if($$value == $result[$i]['clientStats'][$j]['email']){
-                        return $result[$i]['clientStats'][$j];
+                for($j=0;$j<=count($object[$i]['clientStats']) - 1;$j++){
+                    if($input == $object[$i]['clientStats'][$j]['email']){
+                        return $object[$i]['clientStats'][$j];
                     }
                 }
             }
