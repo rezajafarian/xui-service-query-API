@@ -17,7 +17,7 @@ $xui = new subscription_inquiry_xui($config['ip'], $config['port'], $config['ssl
 $information = $xui->service_status($_GET['value'], $_GET['type']);
 
 if(is_null($information)){
-    echo json_encode(['success' => false, 'status_code' => 404]);
+    echo json_encode(['success' => false]);
 }else{
     echo json_encode(['success' => true, 'results' => $information]);
 }
