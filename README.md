@@ -18,6 +18,5 @@
 
 ## Example To Use Api
 
-- null1
-- null2
-- null3
+- https://domin.com/folder/web.php?value=name&type=remark
+- https://domin.com/folder/web.php?value=port&type=port
