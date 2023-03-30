@@ -1,6 +1,7 @@
 <?php
 
-if(!isset($_GET['value'])) exit('The value parameter is mandatory!');
+if(!isset($_GET['value']) and !isset($_GET['type'])) exit('The VALUE and TYPE parameter is mandatory!');
+if(!in_array(['remark', 'port'], $_GET['type'])) exit('The TYPE parameter must be one of these (port | remark) options.');
 
 include_once 'class.php';
 
@@ -13,11 +14,7 @@ $config = [
 
 $xui = new subscription_inquiry_xui($config['ip'], $config['port'], $config['ssl'], $config['session']);
 
-if(isset($_GET['type']) and $_GET['type'] == 'port'){
-    $information = $xui->service_status($_GET['value'], 'port');
-}else{
-    $information = $xui->service_status($_GET['value'], 'value');
-}
+$information = $xui->service_status($_GET['value'], $_GET['type']);
 
 if(is_null($information)){
     echo json_encode(['success' => false, 'status_code' => 404]);
