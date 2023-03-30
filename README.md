@@ -1,4 +1,4 @@
-### 🔰 xui-service-query-API
+### xui-service-query-API
 
 # X-ui Conection Status Bot
 
@@ -18,5 +18,5 @@
 
 ## Example To Use Api
 
-- https://domin.com/folder/web.php?value=name&type=remark
-- https://domin.com/folder/web.php?value=port&type=port
+- search by remark -> https://domin.com/folder/web.php?value=name&type=remark
+- search by port -> https://domin.com/folder/web.php?value=port&type=port
