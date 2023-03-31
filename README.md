@@ -13,7 +13,7 @@
 
 ## Parameters
 
- [ ] value
+ [] value
  - type
 
 ## Example To Use Api
